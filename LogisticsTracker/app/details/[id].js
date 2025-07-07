@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
   headerImage: {
     width: 300,
     height: 200,
-    marginBottom: 10,
+    marginBottom: 20,
   },
   headerTitle: {
     fontSize: 30,
@@ -108,7 +108,6 @@ const styles = StyleSheet.create({
   },
   detailsCard: {
     backgroundColor: '#fff',
-    marginHorizontal: 16,
     marginTop: 16,
     padding: 16,
     borderRadius: 10,
@@ -119,7 +118,7 @@ const styles = StyleSheet.create({
     elevation: 3,
   },
   label: {
-    fontSize: 16,
+    fontSize: 20,
     color: '#333',
     marginBottom: 8,
   },

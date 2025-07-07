@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { View, Text, StyleSheet, Button } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { useLocalSearchParams } from 'expo-router';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Toast from 'react-native-toast-message';
@@ -49,13 +49,18 @@ export default function UpdateStatus() {
         <Picker.Item label="Delivered" value="Delivered" />
         <Picker.Item label="Failed" value="Failed" />
       </Picker>
-      <Button title="Submit" onPress={handleSubmit} />
+      <TouchableOpacity
+      onPress={handleSubmit}
+      style={styles.submitTouch}
+      >
+        <Text>Submit</Text>
+      </TouchableOpacity>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: { flex: 1, padding: 16 },
-  label: { fontSize: 18, marginBottom: 16, fontFamily: 'Roboto-Regular' },
+  label: { fontSize: 30, marginBottom: 16, fontFamily: 'Roboto-Regular' },
   picker: { height: 200, width: '100%' }
 });
