@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
-import { View, Text, StyleSheet, Button, Picker } from 'react-native';
+import { View, Text, StyleSheet, Button } from 'react-native';
 import { useLocalSearchParams } from 'expo-router';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Toast from 'react-native-toast-message';
+import { Picker } from '@react-native-picker/picker';
 
 export default function UpdateStatus() {
   const { id } = useLocalSearchParams();
@@ -36,11 +37,11 @@ export default function UpdateStatus() {
 
   return (
     <View style={styles.container}>
-      <Text style={[styles.label, { fontScaling: allowFontScaling }]}>Update Status</Text>
+      <Text style={[styles.label, { allowFontScaling }]}>Update Status</Text>
       <Picker
         selectedValue={status}
         onValueChange={(value) => setStatus(value)}
-        style={[styles.picker, { fontScaling: allowFontScaling }]}
+        style={[styles.picker, { allowFontScaling }]}
       >
         <Picker.Item label="Select Status" value="" />
         <Picker.Item label="Pending" value="Pending" />

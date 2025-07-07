@@ -1,37 +1,24 @@
 import { Stack } from 'expo-router';
-import { StatusBar } from 'expo-status-bar';
-import Toast from 'react-native-toast-message';
-import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
 
+// Prevent the splash screen from auto-hiding
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
-  const [fontsLoaded] = useFonts({
-    'Roboto-Regular': require('../assets/fonts/Roboto-Regular.ttf'),
-  });
-
   useEffect(() => {
-    if (fontsLoaded) {
+    // Simulate a brief delay to mimic font loading
+    setTimeout(() => {
       SplashScreen.hideAsync();
-    }
-  }, [fontsLoaded]);
-
-  if (!fontsLoaded) {
-    return null;
-  }
+    }, 1000);
+  }, []);
 
   return (
-    <>
-      <StatusBar style="auto" />
-      <Stack>
-        <Stack.Screen name="index" options={{ title: 'Dashboard' }} />
-        <Stack.Screen name="details/[id]" options={{ title: 'Package Details' }} />
-        <Stack.Screen name="update/[id]" options={{ title: 'Update Status' }} />
-        <Stack.Screen name="settings" options={{ title: 'Settings' }} />
-      </Stack>
-      <Toast />
-    </>
+    <Stack>
+      <Stack.Screen name="index" options={{ title: 'Dashboard' }} />
+      <Stack.Screen name="details/[id]" options={{ title: 'Package Details' }} />
+      <Stack.Screen name="update/[id]" options={{ title: 'Update Status' }} />
+      <Stack.Screen name="settings" options={{ title: 'Settings' }} />
+    </Stack>
   );
 }
