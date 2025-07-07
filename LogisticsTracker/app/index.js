@@ -83,9 +83,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#f5f5f5',
     padding: 20
   },
-  headerContainer: {
-
-  },
   headerGradient: {
     padding: 20,
     alignItems: 'center',
@@ -94,17 +91,17 @@ const styles = StyleSheet.create({
   },
   headerImage: {
     width: "100%",
-    height: 150,
+    height: 200,
     marginBottom: 10,
   },
   headerTitle: {
-    fontSize: 30,
+    fontSize: 40,
     fontWeight: 'bold',
     color: '#fff',
     textAlign: 'center',
   },
   headerSubtitle: {
-    fontSize: 16,
+    fontSize: 20,
     color: '#e0e0e0',
     textAlign: 'center',
     marginTop: 10,
