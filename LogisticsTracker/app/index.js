@@ -32,7 +32,7 @@ export default function Dashboard() {
       onPress={() => router.push(`/details/${item.id}`)}
     >
       <Text style={[styles.itemText, { allowFontScaling }]}>ID: {item.trackingId}</Text>
-      <Text style={[styles.itemText, { allowFontScaling }]}>{item.recipient.name}</Text>
+      <Text style={[styles.itemText, { allowFontScaling }]}>Name: {item.recipient.name}</Text>
       <Text
         style={[
           styles.statusBadge,
@@ -42,7 +42,7 @@ export default function Dashboard() {
           { allowFontScaling }
         ]}
       >
-        {item.status}
+        Status: {item.status}
       </Text>
     </TouchableOpacity>
   );
@@ -107,9 +107,6 @@ const styles = StyleSheet.create({
     marginTop: 10,
     paddingHorizontal: 20,
   },
-  flatList: {
-    
-  },
   item: {
     backgroundColor: '#fff',
     padding: 16,
@@ -122,7 +119,7 @@ const styles = StyleSheet.create({
     elevation: 3,
   },
   itemText: {
-    fontSize: 16,
+    fontSize: 20,
     color: '#333',
     marginBottom: 4,
   },
