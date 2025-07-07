@@ -53,7 +53,7 @@ export default function UpdateStatus() {
       onPress={handleSubmit}
       style={styles.submitTouch}
       >
-        <Text>Submit</Text>
+        <Text style={styles.submitText}>Submit</Text>
       </TouchableOpacity>
     </View>
   );
@@ -62,7 +62,8 @@ export default function UpdateStatus() {
 const styles = StyleSheet.create({
   container: { flex: 1, padding: 16 },
   label: { fontSize: 30, marginBottom: 16, fontFamily: 'Roboto-Regular' },
-  picker: { height: 200, width: '100%' },
-  submitTouch: {backgroundColor: "green", height: 50, borderRadius: 20, marginTop: 30}
+  picker: {backgroundColor: "tomato", height: 200, width: '100%',  },
+  submitTouch: {backgroundColor: "green", height: 50, borderRadius: 20, marginTop: 30,  alignItems: "center", justifyContent: "center"},
+  submitText: {color: "#fff", fontSize: 25}
 
 });
