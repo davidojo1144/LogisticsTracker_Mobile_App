@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { FlatList, Text, View, TouchableOpacity, StyleSheet } from 'react-native';
+import { FlatList, Text, View, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useRouter } from 'expo-router';
 import { packages } from '../data/packages.js';
@@ -52,6 +52,11 @@ export default function Dashboard() {
 
   return (
     <View style={styles.container}>
+      <Image 
+      resizeMode='contain'
+      style={{width: "auto", height: "auto"}}
+      source={require("../assets/images/dashboardimg.jpg")}/>
+
       <FlatList
         data={packages}
         renderItem={renderItem}
