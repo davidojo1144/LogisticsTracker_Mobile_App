@@ -6,6 +6,12 @@
     "orientation": "portrait",
     "scheme": "logistics",
     "jsEngine": "hermes",
-    "assetBundlePatterns": ["**/*"]
+    "assetBundlePatterns": ["**/*"],
+    "android": {
+      "newArchEnabled": true
+    },
+    "ios": {
+      "newArchEnabled": true
+    }
   }
 }
