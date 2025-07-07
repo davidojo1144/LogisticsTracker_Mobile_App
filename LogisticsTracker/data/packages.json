@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "trackingId": "TRK12345",
+    "recipient": {
+      "name": "John Doe",
+      "phone": "+1234567890",
+      "address": "123 Main St, City"
+    },
+    "status": "Pending",
+    "weight": 2.5,
+    "type": "Electronics"
+  },
+  {
+    "id": "2",
+    "trackingId": "TRK67890",
+    "recipient": {
+      "name": "Jane Smith",
+      "phone": "+0987654321",
+      "address": "456 Oak Ave, Town"
+    },
+    "status": "In Transit",
+    "weight": 1.8,
+    "type": "Books"
+  },
+  {
+    "id": "3",
+    "trackingId": "TRK11223",
+    "recipient": {
+      "name": "Alice Johnson",
+      "phone": "+1122334455",
+      "address": "789 Pine Rd, Village"
+    },
+    "status": "Delivered",
+    "weight": 3.0,
+    "type": "Clothing"
+  }
+]

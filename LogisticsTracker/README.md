@@ -1,50 +1,44 @@
-# Welcome to your Expo app 👋
+Logistics Tracker
+A React Native app built with Expo for field logistics operators to manage package delivery statuses.
+Setup Instructions
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Initialize Project:
 
-## Get started
+Run npx create-expo-app LogisticsTracker --template blank.
+Replace app.json and package.json with provided files.
+Install dependencies: npm install.
 
-1. Install dependencies
 
-   ```bash
-   npm install
-   ```
+Add Fonts:
 
-2. Start the app
+Create assets/fonts/ directory.
+Download Roboto-Regular.ttf from Google Fonts and place it in assets/fonts/.
 
-   ```bash
-   npx expo start
-   ```
 
-In the output, you'll find options to open the app in a
+Add Data:
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+Create data/ directory.
+Add packages.json with the provided mock data.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
 
-## Get a fresh project
+Run the App:
 
-When you're ready, run:
+Start the Expo server: npm start.
+Use Expo Go app or an emulator to test on iOS/Android.
 
-```bash
-npm run reset-project
-```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
 
-## Learn more
+Features
 
-To learn more about developing your project with Expo, look at the following resources:
+Dashboard: Lists packages with tracking ID, recipient name, and status badges (Pending: orange, In Transit: blue, Delivered: green). Supports font scaling.
+Package Details: Shows full package info with locked fonts. Includes buttons for marking as delivered (toast), contacting recipient (phone link), and updating status.
+Update Status: Form to change package status (Pending, In Transit, Delivered, Failed) with validation and console logging. Supports font scaling.
+Settings: Toggle for font scaling, saved to AsyncStorage, affecting Dashboard and Update Status screens.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Dependencies
 
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Expo (~51.0.14)
+Expo Router (~3.5.14)
+React Native (0.74.2)
+AsyncStorage (1.23.1)
+react-native-toast-message (^2.2.0)
