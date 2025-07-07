@@ -1,7 +1,7 @@
-[
+export const packages = [
   {
     "id": "1",
-    "trackingId": "TRK12345",
+    "trackingId": "TRK001",
     "recipient": {
       "name": "John Doe",
       "phone": "+1234567890",
@@ -9,30 +9,30 @@
     },
     "status": "Pending",
     "weight": 2.5,
-    "type": "Electronics"
+    "type": "Standard"
   },
   {
     "id": "2",
-    "trackingId": "TRK67890",
+    "trackingId": "TRK002",
     "recipient": {
       "name": "Jane Smith",
       "phone": "+0987654321",
-      "address": "456 Oak Ave, Town"
+      "address": "456 Elm St, City"
     },
     "status": "In Transit",
     "weight": 1.8,
-    "type": "Books"
+    "type": "Express"
   },
   {
     "id": "3",
-    "trackingId": "TRK11223",
+    "trackingId": "TRK003",
     "recipient": {
       "name": "Alice Johnson",
       "phone": "+1122334455",
-      "address": "789 Pine Rd, Village"
+      "address": "789 Oak St, City"
     },
     "status": "Delivered",
     "weight": 3.0,
-    "type": "Clothing"
+    "type": "Standard"
   }
 ]

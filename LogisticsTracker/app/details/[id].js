@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, Button, Linking } from 'react-native';
 import { useRouter, useLocalSearchParams } from 'expo-router';
 import Toast from 'react-native-toast-message';
-import { packages } from '../../data/packages.json';
+import { packages } from '../../data/packages.js';
 
 export default function PackageDetails() {
   const { id } = useLocalSearchParams();
