@@ -17,15 +17,11 @@ export default function Dashboard() {
     loadFontScaling();
   }, []);
 
-  // Debug: Log packages to ensure data is loaded
-  useEffect(() => {
-    console.log('Packages:', packages);
-  }, []);
 
   if (!packages || packages.length === 0) {
     return (
       <View style={styles.container}>
-        <Text style={styles.errorText}>No packages found. Please check data/packages.json.</Text>
+        <Text style={styles.errorText}>No packages found.</Text>
       </View>
     );
   }
@@ -85,16 +81,16 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#f5f5f5',
+    padding: 20
   },
   headerContainer: {
-    padding: 10
 
   },
   headerGradient: {
     padding: 20,
     alignItems: 'center',
-    borderBottomLeftRadius: 20,
-    borderBottomRightRadius: 20,
+    borderBottomLeftRadius: 30,
+    borderBottomRightRadius: 2,
   },
   headerImage: {
     width: "100%",
@@ -111,7 +107,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: '#e0e0e0',
     textAlign: 'center',
-    marginTop: 8,
+    marginTop: 10,
     paddingHorizontal: 20,
   },
   flatList: {
@@ -120,7 +116,6 @@ const styles = StyleSheet.create({
   item: {
     backgroundColor: '#fff',
     padding: 16,
-    marginHorizontal: 16,
     marginVertical: 8,
     borderRadius: 10,
     shadowColor: '#000',
