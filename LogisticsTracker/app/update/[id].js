@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
   container: { flex: 1, padding: 16 },
   label: { fontSize: 30, marginBottom: 16, fontFamily: 'Roboto-Regular' },
   picker: {backgroundColor: "tomato", height: 200, width: '100%',  },
-  submitTouch: {backgroundColor: "green", height: 50, borderRadius: 20, marginTop: 30,  alignItems: "center", justifyContent: "center"},
+  submitTouch: {backgroundColor: "orange", height: 50, borderRadius: 20, marginTop: 30,  alignItems: "center", justifyContent: "center"},
   submitText: {color: "#fff", fontSize: 25}
 
 });
