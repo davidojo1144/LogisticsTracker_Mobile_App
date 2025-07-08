@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { View, Text, Switch, StyleSheet, Image, ScrollView } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { LinearGradient } from 'expo-linear-gradient';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function Settings() {
   const [allowFontScaling, setAllowFontScaling] = useState(true);
@@ -20,7 +21,7 @@ export default function Settings() {
   };
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <ScrollView contentContainerStyle={styles.contentContainer}>
         <LinearGradient
           colors={['#2196f3', '#3f51b5']}
@@ -51,7 +52,7 @@ export default function Settings() {
           />
         </View>
       </ScrollView>
-    </View>
+    </SafeAreaView>
   );
 }
 

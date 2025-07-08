@@ -5,6 +5,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import Toast from 'react-native-toast-message';
 import { Picker } from '@react-native-picker/picker';
 import { router } from 'expo-router';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function UpdateStatus() {
   const { id } = useLocalSearchParams();
@@ -37,7 +38,7 @@ export default function UpdateStatus() {
   };
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Text style={[styles.label, { allowFontScaling }]}>Update Status</Text>
       <Picker
         selectedValue={status}
@@ -63,7 +64,7 @@ export default function UpdateStatus() {
       style={styles.settingWrapper}>
         <Text style={styles.settingText}>Setting</Text>
       </TouchableOpacity>
-    </View>
+    </SafeAreaView>
   );
 }
 

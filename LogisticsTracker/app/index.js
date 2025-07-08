@@ -4,6 +4,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useRouter } from 'expo-router';
 import { LinearGradient } from 'expo-linear-gradient';
 import { packages } from '../data/packages.js';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function Dashboard() {
   const router = useRouter();
@@ -48,7 +49,7 @@ export default function Dashboard() {
   );
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <ScrollView contentContainerStyle={styles.headerContainer}>
         <LinearGradient
           colors={['#2196f3', '#3f51b5']}
@@ -73,7 +74,7 @@ export default function Dashboard() {
         keyExtractor={(item) => item.id.toString()}
         style={styles.flatList}
       />
-    </View>
+    </SafeAreaView>
   );
 }
 

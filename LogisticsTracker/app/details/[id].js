@@ -4,6 +4,7 @@ import { useRouter, useLocalSearchParams } from 'expo-router';
 import Toast from 'react-native-toast-message';
 import { LinearGradient } from 'expo-linear-gradient';
 import { packages } from '../../data/packages.js';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function PackageDetails() {
   const { id } = useLocalSearchParams();
@@ -33,7 +34,10 @@ export default function PackageDetails() {
   };
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
+
+      <Text style={styles.containerText}>Packages Details</Text>
+
       <ScrollView contentContainerStyle={styles.contentContainer}>
         <LinearGradient
           colors={['#2196f3', '#3f51b5']}
@@ -76,7 +80,7 @@ export default function PackageDetails() {
           </View>
         </View>
       </ScrollView>
-    </View>
+    </SafeAreaView>
   );
 }
 
@@ -85,6 +89,10 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#f5f5f5',
     padding: 20
+  },
+  containerText: {
+    fontSize: 40,
+    color: "black"
   },
   contentContainer: {
     paddingBottom: 20,
