@@ -67,13 +67,12 @@ const styles = StyleSheet.create({
   headerGradient: {
     padding: 10,
     alignItems: 'center',
-    borderBottomLeftRadius: 20,
     borderBottomRightRadius: 20,
   },
   headerImage: {
     width: 200,
     height: 150,
-    marginBottom: 10,
+    marginBottom: 20,
   },
   headerTitle: {
     fontSize: 30,
