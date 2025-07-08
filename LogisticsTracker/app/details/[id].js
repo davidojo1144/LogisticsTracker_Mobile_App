@@ -36,7 +36,7 @@ export default function PackageDetails() {
   return (
     <SafeAreaView style={styles.container}>
 
-      <Text style={styles.containerText}>Packages Details</Text>
+      <Text style={styles.containerText}>Packages </Text>
 
       <ScrollView contentContainerStyle={styles.contentContainer}>
         <LinearGradient
@@ -87,12 +87,14 @@ export default function PackageDetails() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f5f5f5',
+    backgroundColor: 'lightgray',
     padding: 20
   },
   containerText: {
     fontSize: 40,
-    color: "black"
+    color: "black",
+    fontFamily: "Roboto",
+    paddingBottom: 10
   },
   contentContainer: {
     paddingBottom: 20,

@@ -22,11 +22,13 @@ export default function Settings() {
 
   return (
     <SafeAreaView style={styles.container}>
+
       <ScrollView contentContainerStyle={styles.contentContainer}>
         <LinearGradient
           colors={['#2196f3', '#3f51b5']}
           style={styles.headerGradient}
         >
+          
           <Image
             source={require('../assets/images/settings.jpg')}
             style={styles.headerImage}
@@ -59,7 +61,7 @@ export default function Settings() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f5f5f5',
+    backgroundColor: 'lightgray',
     padding: 20
   },
   contentContainer: {

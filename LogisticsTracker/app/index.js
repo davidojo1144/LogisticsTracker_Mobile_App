@@ -50,6 +50,9 @@ export default function Dashboard() {
 
   return (
     <SafeAreaView style={styles.container}>
+
+      <Text style={styles.containerText}>Dashboard </Text>
+
       <ScrollView contentContainerStyle={styles.headerContainer}>
         <LinearGradient
           colors={['#2196f3', '#3f51b5']}
@@ -81,8 +84,14 @@ export default function Dashboard() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f5f5f5',
+    backgroundColor: 'lightgray',
     padding: 20
+  },
+    containerText: {
+    fontSize: 40,
+    color: "black",
+    fontFamily: "Roboto",
+    paddingBottom: 10
   },
   headerGradient: {
     padding: 20,
