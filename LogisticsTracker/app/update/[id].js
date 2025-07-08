@@ -69,7 +69,7 @@ export default function UpdateStatus() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, padding: 16, backgroundColor: "gray" },
+  container: { flex: 1, padding: 16, backgroundColor: "lightgray" },
   label: { fontSize: 40, marginBottom: 16, fontFamily: 'Roboto-Regular' },
   picker: {backgroundColor: '#2196f3', height: 200, width: '100%', borderRadius: 10  },
   submitTouch: {backgroundColor: "orange", height: 50, borderRadius: 20, marginTop: 30,  alignItems: "center", justifyContent: "center"},
