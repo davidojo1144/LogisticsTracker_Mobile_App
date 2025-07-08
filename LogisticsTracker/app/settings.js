@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#f5f5f5',
-    
+    padding: 20
   },
   contentContainer: {
     paddingBottom: 20,
@@ -76,13 +76,13 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   headerTitle: {
-    fontSize: 24,
+    fontSize: 30,
     fontWeight: 'bold',
     color: '#fff',
     textAlign: 'center',
   },
   headerSubtitle: {
-    fontSize: 16,
+    fontSize: 20,
     color: '#e0e0e0',
     textAlign: 'center',
     marginTop: 8,
@@ -90,8 +90,7 @@ const styles = StyleSheet.create({
   },
   settingsCard: {
     backgroundColor: '#fff',
-    marginHorizontal: 16,
-    marginTop: 16,
+    marginTop: 20,
     padding: 16,
     borderRadius: 10,
     shadowColor: '#000',
