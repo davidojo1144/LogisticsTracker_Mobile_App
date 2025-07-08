@@ -4,6 +4,7 @@ import { useLocalSearchParams } from 'expo-router';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Toast from 'react-native-toast-message';
 import { Picker } from '@react-native-picker/picker';
+import { router } from 'expo-router';
 
 export default function UpdateStatus() {
   const { id } = useLocalSearchParams();
@@ -49,11 +50,18 @@ export default function UpdateStatus() {
         <Picker.Item label="Delivered" value="Delivered" />
         <Picker.Item label="Failed" value="Failed" />
       </Picker>
+
       <TouchableOpacity
       onPress={handleSubmit}
       style={styles.submitTouch}
       >
         <Text style={styles.submitText}>Submit</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity 
+      onPress={() => router.push("/settings")}
+      style={styles.settingWrapper}>
+        <Text style={styles.settingText}>Setting</Text>
       </TouchableOpacity>
     </View>
   );
@@ -64,6 +72,7 @@ const styles = StyleSheet.create({
   label: { fontSize: 30, marginBottom: 16, fontFamily: 'Roboto-Regular' },
   picker: {backgroundColor: "tomato", height: 200, width: '100%',  },
   submitTouch: {backgroundColor: "orange", height: 50, borderRadius: 20, marginTop: 30,  alignItems: "center", justifyContent: "center"},
-  submitText: {color: "#fff", fontSize: 25}
-
+  submitText: {color: "#fff", fontSize: 25},
+  settingWrapper: {marginTop: 30, backgroundColor: "gray", width: "50%", height: "7%", borderRadius:30, alignItems: "center", justifyContent: "center"},
+  settingText: {color: "#fff", fontSize: 25}
 });

@@ -13,7 +13,7 @@ export default function PackageDetails() {
   useEffect(() => {
     const packageData = packages.find((p) => p.id === id);
     setPkg(packageData);
-    console.log('Package Data:', packageData); // Debug
+    console.log('Package Data:', packageData); 
   }, [id]);
 
   if (!pkg) {
